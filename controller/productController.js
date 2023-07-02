@@ -11,6 +11,14 @@ const controller = {
         // logica
     },
 
+    guardar: function (req, res) {
+        return res.render('guardar');
+    },
+
+    store: function (req, res) {
+        return res.send(req.body);
+    }
+
 }
 
 module.exports = controller;

@@ -9,4 +9,8 @@ router.get('/:id', productController.mostrarPorId);
 
 router.get('/crear', productController.crear);
 
+router.get('/guardar', productController.guardar);
+
+router.post('/guardar', productController.store);
+
 module.exports = router;

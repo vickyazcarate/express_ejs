@@ -5,3 +5,14 @@ body {
     text-align: center;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    width: 30vw;
+    
+    
+    
+}
+

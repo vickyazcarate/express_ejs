@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 
-const productRoutes = require('./routes/productRoutes');
-const mainRoutes = require('./routes/mainRoutes');
-const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/product');
+const mainRoutes = require('./routes/main');
+const userRoutes = require('./routes/user');
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
@@ -19,5 +19,7 @@ app.use('/', mainRoutes);
 
 app.use('/usuarios', userRoutes);
 
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 
