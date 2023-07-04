@@ -19,6 +19,7 @@ const controller = {
             {id: 7, name: 'Isabel'}
         ];
 
+
     },
 
     search: function(req, res) {
@@ -32,6 +33,29 @@ const controller = {
             email: req.body.email
         };
         res.redirect('usuarios/list');
+    }, 
+
+    edit: function(req, res) {
+        let idUser = req.params.idUser;
+
+        let users = [
+            {id: 1, name: 'Vicky'},
+            {id: 2, name: 'John'},
+            {id: 3, name: 'Fede'},
+            {id: 4, name: 'Juan'},
+            {id: 5, name: 'Enrique'},
+            {id: 6, name: 'Esteban'},
+            {id: 7, name: 'Isabel'}
+        ];
+
+        let userToEdit = users[idUser];
+
+        res.render('userEdit', {userToEdit: userToEdit});
+
+    }, 
+
+    delete: function(req, res) {
+        //logica
     }
    
 }

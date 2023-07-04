@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
 
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 const productRoutes = require('./routes/product');
-const mainRoutes = require('./routes/main');
-const userRoutes = require('./routes/user');
+const mainRoutes = require('./routes');
+const userRoutes = require('./routes/users');
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');

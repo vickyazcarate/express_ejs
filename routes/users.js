@@ -13,4 +13,10 @@ router.get('/list', userController.list);
 
 router.get('/search', userController.search);
 
+router.get('/edit/:idUser', userController.edit);
+
+router.put('/edit/:idUser', userController.edit);
+
+router.delete('/delete/:idUser', userController.delete);
+
 module.exports = router;
